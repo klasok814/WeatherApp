@@ -5,4 +5,5 @@ package com.androidaplication.bubu.pogoda.ui;
  */
 public class KeyClass {
     public static final String WEATHER_DETAILS = "weather_details";
+    public static final String HOURLY = "hourly";
 }

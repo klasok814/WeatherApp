@@ -1,23 +1,34 @@
 package com.androidaplication.bubu.pogoda.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Klaudia on 2016-05-06.
  */
-public class Hourly {
-    private Long mTime;
-    private String mSummary;
-    private String mIcon;
-    private String mTemperature;
+public class Hourly implements Parcelable {
+    @SerializedName("summary") private String mSummary;
+    @SerializedName("data") private List<HourlyData> mHourlyDatas = new ArrayList<>();
+
 
     public Hourly() {}
 
-    public Long getTime() {
-        return mTime;
-    }
+    public static final Creator<Hourly> CREATOR = new Creator<Hourly>() {
+        @Override
+        public Hourly createFromParcel(Parcel in) {
+            return new Hourly(in);
+        }
 
-    public void setTime(Long time) {
-        mTime = time;
-    }
+        @Override
+        public Hourly[] newArray(int size) {
+            return new Hourly[size];
+        }
+    };
 
     public String getSummary() {
         return mSummary;
@@ -27,19 +38,31 @@ public class Hourly {
         mSummary = summary;
     }
 
-    public String getIcon() {
-        return mIcon;
+    public List<HourlyData> getHourlyDatas() {
+        return mHourlyDatas;
     }
 
-    public void setIcon(String icon) {
-        mIcon = icon;
+    public void setHourlyDatas(List<HourlyData> hourlyDatas) {
+        mHourlyDatas = hourlyDatas;
     }
 
-    public String getTemperature() {
-        return mTemperature;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public void setTemperature(String temperature) {
-        mTemperature = temperature;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(mSummary);
+        dest.writeList(mHourlyDatas);
+    }
+
+    private Hourly(Parcel in){
+        mSummary = in.readString();
+        mHourlyDatas = in.readArrayList(HourlyData.class.getClassLoader());
+     }
+
+    public String getTranslateSummary(){
+        return Weather.getTranslateSummary(mSummary);
     }
 }

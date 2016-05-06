@@ -20,18 +20,30 @@
     <!-- ___________________________ MyStyles ___________________________________ -->
 
     <style name="WeatherDetailsThema" parent="@style/AppTheme">
-        <item name="android:textViewStyle">@style/WhiteItalicTextView</item>
+        <item name="android:textViewStyle">@style/WhiteItalicTextView20</item>
     </style>
 
-    <style name="WhiteItalicTextView" parent="@android:style/Widget.TextView">
+    <style name="WhiteItalicTextView20" parent="@android:style/Widget.TextView">
         <item name="android:textSize">@dimen/weather_details_text_size</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="TransparentWhiteTextView30" parent="@style/WhiteItalicTextView">
+    <style name="WhiteItalicTextView15" parent="WhiteItalicTextView20">
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="WhiteItalicTextView30" parent="WhiteItalicTextView20">
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="TransparentWhiteTextView30" parent="@style/WhiteItalicTextView20">
         <item name="android:textSize">@dimen/main_screen_time_size</item>
         <item name="android:textColor">@color/lightWhite</item>
+    </style>
+
+    <style name="ListHeader" parent="@style/TransparentWhiteTextView30">
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="TransparentWhiteTextView60" parent="@style/TransparentWhiteTextView30">

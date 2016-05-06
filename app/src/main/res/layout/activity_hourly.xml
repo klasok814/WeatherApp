@@ -11,9 +11,21 @@
     tools:context=".ui.HourlyActivity"
     android:background="@drawable/hourly_sunny_day_background">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/example_weather_summary"
+        android:layout_margin="@dimen/margin_layout_weather_details"
+        android:gravity="center"
+        android:id="@+id/listHeader"
+        style="@style/ListHeader" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@android:id/list"/>
+        android:layout_below="@id/listHeader"
+        android:id="@android:id/list"
+        android:dividerHeight="@dimen/dimen_0dp"
+        android:divider="@null"/>
 
 </RelativeLayout>

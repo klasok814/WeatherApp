@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:background="@android:color/black">
+
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.3"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:id="@+id/hourly_time_label"
+        android:layout_margin="@dimen/margin_percent_5dp_weather_detail"
+        android:layout_gravity="center"
+        tools:text="23"
+        style="@style/WhiteItalicTextView30"/>
+
+    <ImageView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.2"
+        android:layout_height="wrap_content"
+        android:id="@+id/hourly_icon"
+        android:src="@drawable/fog_icon"/>
+
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:id="@+id/hourly_summary_label"
+        android:layout_margin="@dimen/margin_percent_5dp_weather_detail"
+        android:layout_gravity="center"
+        tools:text="@string/example_weather_summary"
+        style="@style/WhiteItalicTextView15"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_gravity="center_vertical"
+        android:gravity="right"
+        android:id="@+id/hourly_temperature_label"
+        tools:text="@string/exaple_text_50"
+        style="@style/WhiteItalicTextView30"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:layout_marginLeft="@dimen/margin_percent_5dp_weather_detail"
+        android:layout_gravity="center"
+        android:text="@string/symbol_celciusza"
+        style="@style/WhiteItalicTextView30"/>
+
+</LinearLayout>

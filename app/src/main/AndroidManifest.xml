@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.WeatherDetails"
-            android:theme="@style/WeatherDetailsThema">
+                  android:theme="@style/WeatherDetailsThema">
         </activity>
         <activity android:name=".ui.HourlyActivity">
         </activity>

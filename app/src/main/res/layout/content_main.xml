@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:id="@+id/townLabel"
-        android:text="@string/egzample_text_city"
+        android:text="@string/example_text_city"
         style="@style/TransparentWhiteTextView30"/>
 
     <LinearLayout
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:id="@+id/timeValue"
-            android:text="@string/egazmple_time"
+            android:text="@string/example_time"
             android:gravity="end"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -52,17 +52,6 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             style="@style/TransparentWhiteTextView60"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/degree"
-            android:id="@+id/imageView"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/temperatureValue"
-            android:layout_toEndOf="@+id/temperatureValue"/>
 
         <TextView
             android:layout_width="wrap_content"

@@ -6,10 +6,6 @@ import android.os.Parcelable;
 import com.androidaplication.bubu.pogoda.R;
 import com.google.gson.annotations.SerializedName;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
 /**
  * Created by Klaudia on 2016-05-03.
  */
@@ -130,13 +126,7 @@ public class Currently implements Parcelable {
     }
 
     public String getTranslateSummary(){
-        if(mSummary.equals("Clear"))
-            return "Słoneczny dzień";
-        if(mSummary.equals("Partly Cloudy"))
-            return "Częściowe zachmurzenia";
-        if(mSummary.equals("Drizzle"))
-            return "Mżawka";
-        return mSummary;
+      return Weather.getTranslateSummary(mSummary);
     }
 
     public int getBackgroundIconId(){
@@ -151,18 +141,11 @@ public class Currently implements Parcelable {
     }
 
     public String getFormatterTime(){
-        SimpleDateFormat formatter = new SimpleDateFormat("kk:mm");
-        formatter.setTimeZone(TimeZone.getTimeZone("Europe/Warsaw"));
-        Date dateTime = new Date(getTime() *1000);
-        String timeFormat = formatter.format(dateTime);
-
-        return timeFormat;
+        return Weather.getFormatterTime(mTime);
     }
 
     public int getFormatterTemperature(){
-        int temperature = (int) getTemperature();
-        temperature = (temperature - 32) * 5/9 ;
-        return temperature;
+        return Weather.getFormatterTemperature(mTemperature);
     }
 
     @Override

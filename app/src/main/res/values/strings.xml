@@ -16,11 +16,12 @@
     <string name="cloudCover_description">Zachmurzenie</string>
     <string name="windSpeed_description">Prędkość wiatru</string>
     <string name="visibility_description">Widoczność</string>
-    <string name="symbol_celciusza">\'C</string>
+    <string name="symbol_celciusza">°C</string>
     <string name="symbol_hPa">hPa</string>
     <string name="symbol_km_h">km/h</string>
     <string name="symbol_mm">mm</string>
     <string name="weather_details_actionbar_title">Szczegółowe informację</string>
-    <string name="egzample_text_city">Katowice</string>
-    <string name="egazmple_time">23:45</string>
+    <string name="example_text_city">Katowice</string>
+    <string name="example_time">23:45</string>
+    <string name="example_weather_summary">Słoneczny dzień</string>
 </resources>

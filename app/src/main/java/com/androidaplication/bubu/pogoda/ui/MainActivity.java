@@ -11,12 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.androidaplication.bubu.pogoda.R;
 import com.androidaplication.bubu.pogoda.data.Currently;
+import com.androidaplication.bubu.pogoda.data.Hourly;
 import com.androidaplication.bubu.pogoda.data.Weather;
 import com.androidaplication.bubu.pogoda.service.Service;
 import com.androidaplication.bubu.pogoda.service.ServiceMenager;
@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.timeValue) TextView mTime;
     @Bind(R.id.townLabel) TextView mTown;
     @Bind(R.id.celciuszLabel) TextView mCelciusz;
-    @Bind(R.id.imageView) ImageView mCelciuszImage;
 
     Weather mWeather;
     Currently mCurrently;
+    Hourly mHourly;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,14 +107,12 @@ public class MainActivity extends AppCompatActivity
             mTime.setTextColor(Color.GRAY);
             mTown.setTextColor(Color.GRAY);
             mCelciusz.setTextColor(Color.GRAY);
-           // mCelciuszImage.setImageResource(R.drawable.stopien_czarny);
         }else if(iconId.equals("Partly Cloudy")){
             mSummary.setTextColor(Color.BLACK);
             mTemperature.setTextColor(Color.BLACK);
             mTime.setTextColor(Color.BLACK);
             mTown.setTextColor(Color.BLACK);
             mCelciusz.setTextColor(Color.BLACK);
-           // mCelciuszImage.setImageResource(R.drawable.stopien_czarny);
         }
 
     }
@@ -141,7 +139,9 @@ public class MainActivity extends AppCompatActivity
             intent.putExtra(KeyClass.WEATHER_DETAILS,mCurrently);
             startActivity(intent);
         } else if (id == R.id.hourlyWeather) {
+            mHourly = mWeather.getHourly();
             Intent intent = new Intent(MainActivity.this, HourlyActivity.class);
+            intent.putExtra(KeyClass.HOURLY, mHourly);
             startActivity(intent);
         } else if (id == R.id.dailyWeather) {
             Intent intent = new Intent(MainActivity.this, DailyActivity.class);
