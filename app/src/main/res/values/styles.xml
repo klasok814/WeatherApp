@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- ___________________________ MyStyles ___________________________________ -->
+
+    <style name="WeatherDetailsThema" parent="@style/AppTheme">
+        <item name="android:textViewStyle">@style/WhiteItalicTextView</item>
+    </style>
+
+    <style name="WhiteItalicTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/weather_details_text_size</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TransparentWhiteTextView30" parent="@style/WhiteItalicTextView">
+        <item name="android:textSize">@dimen/main_screen_time_size</item>
+        <item name="android:textColor">@color/lightWhite</item>
+    </style>
+
+    <style name="TransparentWhiteTextView60" parent="@style/TransparentWhiteTextView30">
+        <item name="android:textSize">@dimen/main_screen_tempareture_size</item>
+    </style>
+
+</resources>

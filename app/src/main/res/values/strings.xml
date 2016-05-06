@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Pogoda</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="humidity">Wilgotność powietrza:</string>
+    <string name="exaple_text_50">50</string>
+    <string name="symbol_percent">%</string>
+    <string name="precipIntencity_description">Intensywność opadów</string>
+    <string name="percipIntensity_description">Prawdopodobieństwo opadów</string>
+    <string name="humidity_description">Wilgotność powietrza</string>
+    <string name="pressure_description">Ciśnienie atmosferyczne</string>
+    <string name="temperature_description">Temperatura</string>
+    <string name="cloudCover_description">Zachmurzenie</string>
+    <string name="windSpeed_description">Prędkość wiatru</string>
+    <string name="visibility_description">Widoczność</string>
+    <string name="symbol_celciusza">\'C</string>
+    <string name="symbol_hPa">hPa</string>
+    <string name="symbol_km_h">km/h</string>
+    <string name="symbol_mm">mm</string>
+    <string name="weather_details_actionbar_title">Szczegółowe informację</string>
+    <string name="egzample_text_city">Katowice</string>
+    <string name="egazmple_time">23:45</string>
+</resources>
