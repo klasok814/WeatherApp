@@ -11,7 +11,7 @@ import com.androidaplication.bubu.pogoda.data.Currently;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class WeatherDetails extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity {
     @Bind(R.id.percipIntenceLayout) LinearLayout mPercipIntensityLayout;
     @Bind(R.id.percipProbabilityLayout) LinearLayout mPercipProbabilityLayout;
     @Bind(R.id.temperatureLayout) LinearLayout mTemperatureLayout;
@@ -39,27 +39,27 @@ public class WeatherDetails extends AppCompatActivity {
         updateLayout(mPercipIntensityLayout, getString(R.string.precipIntencity_description),
                 mCurrently.getPrecipIntensity() + "",getString(R.string.symbol_mm));
         updateLayout(mPercipProbabilityLayout, getString(R.string.percipIntensity_description),
-                (mCurrently.getPrecipProbability()*100) + "",getString(R.string.symbol_percent));
+                mCurrently.getWholePercent(mCurrently.getPrecipProbability()) + "",getString(R.string.symbol_percent));
         updateLayout(mHumidityLayout, getString(R.string.humidity_description),
-                (mCurrently.getHumidity()*100) + "",getString(R.string.symbol_percent));
+                mCurrently.getWholePercent(mCurrently.getHumidity()) + "",getString(R.string.symbol_percent));
         updateLayout(mPressureLayout, getString(R.string.pressure_description),
-                mCurrently.getPressure() + "",getString(R.string.symbol_hPa));
+                mCurrently.getWholePressure() + "",getString(R.string.symbol_hPa));
         updateLayout(mTemperatureLayout, getString(R.string.temperature_description),
                 mCurrently.getFormatterTemperature() + "",getString(R.string.symbol_celciusza));
         updateLayout(mCloudCoverLayout, getString(R.string.cloudCover_description),
-                (mCurrently.getCloudCover()*100) + "",getString(R.string.symbol_percent));
+                mCurrently.getWholePercent(mCurrently.getCloudCover()) + "",getString(R.string.symbol_percent));
         updateLayout(mWindSpeedLayout, getString(R.string.windSpeed_description),
-                mCurrently.getWindSpeed() + "",getString(R.string.symbol_km_h));
+                mCurrently.getSpeedInKm() + "",getString(R.string.symbol_km_h));
         updateLayout(mVisibilityLayout, getString(R.string.visibility_description),
-                mCurrently.getVisibility() + "",getString(R.string.symbol_percent));
+                mCurrently.getWholePercent(mCurrently.getVisibility()) + "",getString(R.string.symbol_percent));
     }
 
     private void updateLayout(LinearLayout layout, String updateText, String updateData, String updateCharacter){
         TextView parameterLabel = (TextView) layout.getChildAt(0);
         parameterLabel.setText(updateText);
-        TextView dataLabel = (TextView) layout.getChildAt(1);
+        TextView dataLabel = (TextView) layout.getChildAt(2);
         dataLabel.setText(updateData);
-        TextView characterLabel = (TextView) layout.getChildAt(2);
+        TextView characterLabel = (TextView) layout.getChildAt(3);
         characterLabel.setText(updateCharacter);
     }
 }

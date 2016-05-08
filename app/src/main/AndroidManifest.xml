@@ -20,12 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.WeatherDetails"
-                  android:theme="@style/WeatherDetailsThema">
+        <activity android:name=".ui.DetailsActivity">
         </activity>
-        <activity android:name=".ui.HourlyActivity">
+        <activity android:name=".ui.HourlyActivity"
+            android:theme="@style/ListAppThema">
         </activity>
-        <activity android:name=".ui.DailyActivity">
+        <activity android:name=".ui.DailyActivity"
+            android:theme="@style/ListAppThema">
         </activity>
     </application>
 

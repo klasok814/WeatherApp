@@ -4,26 +4,39 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:orientation="horizontal"
-              android:layout_margin="@dimen/margin_layout_weather_details">
+              android:layout_margin="@dimen/margin_percent_5dp_weather_detail"
+              tools:background="@android:color/black">
 
-        <TextView
-            android:layout_width="@dimen/dimen_0dp"
-            android:layout_weight="0.6"
-            android:layout_height="wrap_content"
-            android:id="@+id/type_ability"
-            android:text="@string/humidity"/>
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.3"
+        android:layout_height="wrap_content"
+        android:id="@+id/type_ability"
+        android:text="@string/precipIntencity_description"
+        style="@style/WhiteItalicTextView15"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/humidityLabelDetails"
-            android:text="@string/exaple_text_50"/>
+    <ImageView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.05"
+        android:layout_height="30dp"
+        android:src="@drawable/temperatura"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/type_unit"
-            android:text="@string/symbol_percent"
-            android:layout_marginLeft="@dimen/margin_percent_5dp_weather_detail"/>
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.1"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:id="@+id/humidityLabelDetails"
+        android:text="@string/exaple_text_50"
+        style="@style/WhiteItalicTextView20"/>
+
+    <TextView
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_weight="0.1"
+        android:layout_height="wrap_content"
+        android:id="@+id/type_unit"
+        android:text="@string/symbol_km_h"
+        android:layout_marginLeft="@dimen/margin_percent_5dp_weather_detail"
+        style="@style/WhiteItalicTextView20"/>
 
 </LinearLayout>

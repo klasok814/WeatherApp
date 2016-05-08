@@ -19,8 +19,13 @@
 
     <!-- ___________________________ MyStyles ___________________________________ -->
 
-    <style name="WeatherDetailsThema" parent="@style/AppTheme">
-        <item name="android:textViewStyle">@style/WhiteItalicTextView20</item>
+    <style name="ListAppThema" parent="android:Theme.Holo.Light.NoActionBar">
+        <item name="android:listViewStyle">@style/WeatherListView</item>
+    </style>
+
+    <style name="WeatherListView" parent="@android:style/Widget.ListView">
+        <item name="android:dividerHeight">@dimen/dimen_0dp</item>
+        <item name="android:divider">@null</item>
     </style>
 
     <style name="WhiteItalicTextView20" parent="@android:style/Widget.TextView">
@@ -30,11 +35,17 @@
     </style>
 
     <style name="WhiteItalicTextView15" parent="WhiteItalicTextView20">
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BlackBoldTextView25" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="WhiteItalicTextView30" parent="WhiteItalicTextView20">
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
     <style name="TransparentWhiteTextView30" parent="@style/WhiteItalicTextView20">

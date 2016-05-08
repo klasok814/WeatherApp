@@ -87,19 +87,6 @@ public class Weather {
         if(dataSummary.equals("Mostly Cloudy"))
             return "Pochmurnie";
 
-        if(dataSummary.equals("Clear throughout the day."))
-            return "Bezchmurnie cały dzień";
-        if(dataSummary.equals("Partly cloudy until evening."))
-            return "Częściowe zachmurzenia aż do wieczora";
-        if(dataSummary.equals("Light rain starting in the afternoon."))
-            return "Lekki deszcz po południu";
-        if(dataSummary.equals("Light rain until evening."))
-            return "Lekki deszcze aż do wieczora";
-        if(dataSummary.equals("Mostly cloudy starting in the evening."))
-            return "Wieczorem duże zachmurzenie";
-        if(dataSummary.equals("Mostly cloudy until evening."))
-            return "Pochmurnie aż do wieczora";
-
         return dataSummary;
     }
 

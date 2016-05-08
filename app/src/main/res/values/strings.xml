@@ -24,4 +24,5 @@
     <string name="example_text_city">Katowice</string>
     <string name="example_time">23:45</string>
     <string name="example_weather_summary">Słoneczny dzień</string>
+    <string name="plus_icon">+</string>
 </resources>

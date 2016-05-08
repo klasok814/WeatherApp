@@ -6,10 +6,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="weather_details_text_size">20dp</dimen>
+    <dimen name="weather_details_text_size">20sp</dimen>
     <dimen name="dimen_0dp">0dp</dimen>
     <dimen name="margin_layout_weather_details">10dp</dimen>
     <dimen name="margin_percent_5dp_weather_detail">5dp</dimen>
-    <dimen name="main_screen_time_size">30dp</dimen>
-    <dimen name="main_screen_tempareture_size">60dp</dimen>
+    <dimen name="main_screen_time_size">30sp</dimen>
+    <dimen name="main_screen_tempareture_size">60sp</dimen>
+    <dimen name="daily_list_view_marginTop_25">25dp</dimen>
+    <dimen name="daily_list_view_margin_10">10dp</dimen>
+    <dimen name="temperature_circle_margin_50">50dp</dimen>
 </resources>

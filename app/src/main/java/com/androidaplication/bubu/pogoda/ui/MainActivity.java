@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.androidaplication.bubu.pogoda.R;
 import com.androidaplication.bubu.pogoda.data.Currently;
+import com.androidaplication.bubu.pogoda.data.Daily;
 import com.androidaplication.bubu.pogoda.data.Hourly;
 import com.androidaplication.bubu.pogoda.data.Weather;
 import com.androidaplication.bubu.pogoda.service.Service;
@@ -39,9 +40,8 @@ public class MainActivity extends AppCompatActivity
     @Bind(R.id.townLabel) TextView mTown;
     @Bind(R.id.celciuszLabel) TextView mCelciusz;
 
-    Weather mWeather;
-    Currently mCurrently;
-    Hourly mHourly;
+    private Weather mWeather;
+    private Currently mCurrently;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,9 +95,6 @@ public class MainActivity extends AppCompatActivity
         mTime.setText(mCurrently.getFormatterTime());
         mWeatherLayout.setBackgroundResource(mCurrently.getBackgroundIconId());
         changeTextColor(mCurrently.getIcon());
-
-
-
     }
 
     private void changeTextColor(String iconId){
@@ -127,24 +124,24 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if (id == R.id.detailsWeather) {
-            Intent intent = new Intent(MainActivity.this, WeatherDetails.class);
+            Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
             intent.putExtra(KeyClass.WEATHER_DETAILS,mCurrently);
             startActivity(intent);
         } else if (id == R.id.hourlyWeather) {
-            mHourly = mWeather.getHourly();
+            Hourly hourly = mWeather.getHourly();
             Intent intent = new Intent(MainActivity.this, HourlyActivity.class);
-            intent.putExtra(KeyClass.HOURLY, mHourly);
+            intent.putExtra(KeyClass.HOURLY, hourly);
             startActivity(intent);
         } else if (id == R.id.dailyWeather) {
+            Daily daily = mWeather.getDaily();
             Intent intent = new Intent(MainActivity.this, DailyActivity.class);
+            intent.putExtra(KeyClass.DAILY, daily);
             startActivity(intent);
         }
 

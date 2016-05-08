@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     android:background="@drawable/weather_details_background"
-    tools:context=".ui.WeatherDetails">
+    tools:context=".ui.DetailsActivity">
 
     <include layout="@layout/weather_one_detail_include"
              android:id="@+id/temperatureLayout"/>

@@ -148,6 +148,19 @@ public class Currently implements Parcelable {
         return Weather.getFormatterTemperature(mTemperature);
     }
 
+    public int getWholePercent(double percent){
+        return (int) (percent * 100);
+    }
+
+   public int getWholePressure(){
+       return (int) mPressure;
+   }
+
+    public int getSpeedInKm(){
+        int km_h = (int) (mWindSpeed * 3.6);
+        return km_h;
+    }
+
     @Override
     public int describeContents() {
         return 0;

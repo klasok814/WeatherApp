@@ -24,8 +24,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/listHeader"
-        android:id="@android:id/list"
-        android:dividerHeight="@dimen/dimen_0dp"
-        android:divider="@null"/>
+        android:id="@android:id/list"/>
 
 </RelativeLayout>
