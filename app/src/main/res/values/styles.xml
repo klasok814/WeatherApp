@@ -44,6 +44,14 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+    <style name="BlackBoldTextView12" parent="BlackBoldTextView25">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="BlackBoldTextView15" parent="BlackBoldTextView12">
+        <item name="android:textSize">15sp</item>
+    </style>
+
     <style name="WhiteItalicTextView30" parent="WhiteItalicTextView20">
         <item name="android:textSize">30sp</item>
     </style>

@@ -5,15 +5,15 @@
         <item
             android:id="@+id/detailsWeather"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Szczegóły"/>
+            android:title="@string/details_menu_item"/>
         <item
             android:id="@+id/hourlyWeather"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Prognoza godzinowa"/>
+            android:title="@string/hourly_menu_item"/>
         <item
             android:id="@+id/dailyWeather"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Prognoza tygodniowa"/>
+            android:title="@string/daily_menu_item"/>
     </group>
 
 </menu>

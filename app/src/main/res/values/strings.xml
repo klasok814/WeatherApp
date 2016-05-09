@@ -25,4 +25,14 @@
     <string name="example_time">23:45</string>
     <string name="example_weather_summary">Słoneczny dzień</string>
     <string name="plus_icon">+</string>
+    <string name="sunrise_stube_view">Wschód słońca</string>
+    <string name="sunset_stube_view">Zachód słońca</string>
+    <string name="moon_phrase_stube_view">Faza księżyca</string>
+    <string name="temperature_max_stube_view">Temperatura maksymalna</string>
+    <string name="temperature_min_stube_view">Temperatura minimalna</string>
+    <string name="today_string">dzisiaj</string>
+    <string name="tomorrow_string">jutro</string>
+    <string name="details_menu_item">Szczegóły</string>
+    <string name="hourly_menu_item">Prognoza godzinowa</string>
+    <string name="daily_menu_item">Prognoza tygodniowa</string>
 </resources>

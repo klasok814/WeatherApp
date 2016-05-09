@@ -9,14 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-/**
- * Created by Klaudia on 2016-05-06.
- */
 public class DailyData implements Parcelable{
     @SerializedName("time")private Long mTime;
-    @SerializedName("summary")private String mSummary;
-    @SerializedName("icon")private String mIcon;
-
     @SerializedName("sunriseTime")private Long mSunriseTime;
     @SerializedName("sunsetTime")private Long mSunsetTime;
     @SerializedName("moonPhase")private double mMoonPhase;
@@ -43,22 +37,6 @@ public class DailyData implements Parcelable{
 
     public void setTime(Long time) {
         mTime = time;
-    }
-
-    public String getSummary() {
-        return mSummary;
-    }
-
-    public void setSummary(String summary) {
-        mSummary = summary;
-    }
-
-    public String getIcon() {
-        return mIcon;
-    }
-
-    public void setIcon(String icon) {
-        mIcon = icon;
     }
 
     public Long getSunriseTime() {
@@ -105,15 +83,27 @@ public class DailyData implements Parcelable{
         return Weather.getFormatterTemperature(mTemperatureMax);
     }
 
-    public int getIconId(){
-        return  Weather.getIconId(mIcon);
-    }
-
     public String getDayOfTheWeek() {
         SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
         formatter.setTimeZone(TimeZone.getTimeZone("Europe/Warsaw"));
         Date dateTime = new Date(mTime * 1000);
         return formatter.format(dateTime);
+    }
+
+    public String getFormatterSunriseTime(){
+        return Weather.getFormatterTime(mSunriseTime);
+    }
+
+    public String getFormatterSunsetTime(){
+        return Weather.getFormatterTime(mSunsetTime);
+    }
+
+    public int getFormatterMaxTemperature(){
+        return Weather.getFormatterTemperature(mTemperatureMax);
+    }
+
+    public int getFormatterMinTemperature(){
+        return Weather.getFormatterTemperature(mTemperatureMin);
     }
 
     @Override
@@ -124,8 +114,6 @@ public class DailyData implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(mTime);
-        dest.writeString(mSummary);
-        dest.writeString(mIcon);
         dest.writeLong(mSunriseTime);
         dest.writeLong(mSunsetTime);
         dest.writeDouble(mMoonPhase);
@@ -135,8 +123,6 @@ public class DailyData implements Parcelable{
 
     private DailyData(Parcel in){
         mTime = in.readLong();
-        mSummary = in.readString();
-        mIcon = in.readString();
         mSunriseTime = in.readLong();
         mSunsetTime = in.readLong();
         mMoonPhase = in.readDouble();

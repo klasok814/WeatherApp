@@ -57,17 +57,17 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="@dimen/daily_list_view_margin_10"
         android:layout_marginLeft="@dimen/daily_list_view_margin_10"
+        android:id="@+id/showDailyDetails"
         android:text="@string/plus_icon"
         android:background="@android:color/transparent"
-        android:onClick="showDetails"
         style="@style/WhiteItalicTextView30"/>
 
     <ViewStub
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/weekDayLabel"
+        android:layout_below="@id/circleImageView"
         android:id="@+id/stub_details"
         android:inflatedId="@+id/panel_details"
-        android:layout="@layout/daily_details_one_element"/>
+        android:layout="@layout/stube_layout_daily_details"/>
 
 </RelativeLayout>

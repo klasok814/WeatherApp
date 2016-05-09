@@ -2,7 +2,6 @@ package com.androidaplication.bubu.pogoda.ui;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewStub;
 import android.widget.TextView;
 
@@ -28,8 +27,4 @@ public class DailyActivity extends ListActivity {
         mDailyAdapter = new DailyAdapter(mDaily.getDailyDatas(), this);
         setListAdapter(mDailyAdapter);
     }
-
-    public void showDetails(View view){
-         mViewStub = (ViewStub) findViewById(R.id.stub_details);
-     }
 }
